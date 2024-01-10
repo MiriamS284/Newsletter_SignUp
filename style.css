@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body,
+html {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(235, 18%, 26%);
+}
+
+.news_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 50vw;
+}
+
+/*Newsletter Main*/
+
+.newsletter-card {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 1em;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 1440px;
+  width: 100%;
+}
+
+.form-container,
+.image-container {
+  flex: 1;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin: auto;
+  padding: 100px 50px;
+  height: 100%;
+}
+
+.image-container {
+  padding: 0;
+  margin: 0;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+h1 {
+  color: hsl(234, 29%, 20%);
+  font-weight: bold;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  padding-bottom: 20px;
+}
+
+p {
+  color: hsl(235, 18%, 26%);
+  padding-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+  padding-bottom: 50px;
+}
+
+ul li {
+  color: hsl(235, 18%, 26%);
+  padding: 8px 0;
+  position: relative;
+  padding-left: 2.5rem;
+  list-style: none;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.bullet-icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 15px;
+}
+
+#newsletterForm {
+  margin-top: 2rem;
+}
+
+label {
+  color: hsl(235, 18%, 26%);
+  display: block;
+  margin-bottom: 10px;
+  font-size: small;
+  font-weight: bold;
+}
+
+input[type="email"] {
+  width: 100%;
+  height: 5vh;
+  margin-bottom: 20px;
+  border: 1px solid hsl(231, 7%, 60%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.label-error-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.error-message {
+  font-size: small;
+  margin-bottom: 10px;
+  margin-left: auto;
+  color: #e67359;
+  font-weight: bold;
+  display: none;
+}
+
+.input-invalid {
+  background-color: rgba(231, 115, 89, 0.3);
+  color: #e67359;
+  border: 1px solid #e67359;
+}
+
+h1,
+p,
+ul,
+#newsletterForm {
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+button {
+  background-color: hsl(235, 18%, 26%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 5vh;
+  font-weight: bold;
+}
+
+button:hover,
+button:focus {
+  background-color: hsl(4, 80%, 60%);
+  cursor: pointer;
+  background: linear-gradient(to right, #e67359, #e89c6b);
+}
+
+input[type="email"],
+button {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+/*Success Message Main*/
+
+#hide {
+  display: none;
+}
+
+.success_message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 50%;
+  width: 100%;
+}
+
+.content-success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: auto;
+  padding: 40px 15px;
+  height: 100%;
+  width: 100%;
+}
+.content-success h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.content-success p {
+  padding: 10px 0 10px, 0;
+  margin-bottom: 15px;
+}
+
+.content-success button {
+  box-sizing: border-box;
+  width: calc(100% - 40px);
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.content-success button:hover {
+  cursor: pointer;
+  background: linear-gradient(to right, #e67359, #e89c6b);
+}
+
+.success-bullet-icon {
+  padding: 15px;
+  width: 5.5rem;
+  margin-bottom: 20px;
+}
+
+#user-email {
+  font-weight: bold;
+  color: hsl(234, 29%, 20%);
+}
+
+#success-email {
+  font-weight: bold;
+}
+
+/*Attribution*/
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .news_wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .form-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .form-container p,
+  .form-container ul {
+    font-size: 1rem;
+  }
+
+  .form-container ul li {
+    display: flex;
+    align-items: center;
+    padding-left: 2.5rem;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+
+  .bullet-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+  }
+
+  .newsletter-card {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .image-container {
+    order: -1;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .newsletter-card {
+    box-shadow: none;
+  }
+
+  input[type="email"] {
+    height: 44px;
+  }
+
+  button {
+    height: 44px;
+  }
+
+  button:hover,
+  button:focus {
+    background-color: hsl(4, 80%, 60%);
+    cursor: pointer;
+    background: linear-gradient(to right, #e67359, #e89c6b);
+  }
+
+  .success_message {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 375px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+  }
+
+  .content-success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: inline-block;
+    flex-grow: 1;
+  }
+
+  .content-success img {
+    justify-content: left;
+  }
+
+  .content-success h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+  }
+
+  .content-success p {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  .content-success button {
+    margin-top: 400px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
